@@ -80,9 +80,7 @@ def call_back_data(update, context):
     
 def start(update, context) -> None:
     buttons = ButtonMaker()
-    buttons.buildbutton("Repo", "https://github.com/arkonn/Ark-Mirror")
-    buttons.buildbutton("Join Group", "https://t.me/arkmirror")
-    buttons.buildbutton("O W N E R", "https://t.me/include_i0stream")
+    buttons.buildbutton("Join Group", "https://t.me/dadaxclouds")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         start_string = f'''
@@ -91,7 +89,7 @@ Type /{BotCommands.HelpCommand} to get a list of available commands
 '''
         sendMarkup(start_string, context.bot, update.message, reply_markup)
     else:
-        sendMarkup('Oops... You are not authorised to use Ark Mirror bot, Join our channel to use me', context.bot, update.message, reply_markup)
+        sendMarkup('Oops... You are not authorised to use DaDaXClouds Mirror bot, Join our channel to use me', context.bot, update.message, reply_markup)
 
 def restart(update, context):
     restart_message = sendMessage("Restarting...", context.bot, update.message)
